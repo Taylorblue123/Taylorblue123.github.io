@@ -1,115 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wenxuan's Blog</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <title>Wenxuan Wu's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入字体 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- 使用 Roboto 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <!-- 引入 Font Awesome 图标库 -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- 引入粒子背景库 -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
+    <!-- 粒子背景容器 -->
+    <div id="particles-js"></div>
+
     <nav>
         <ul>
-          <li><a href="#">Wenxuan</a></li>
-          <li><a href="#">Doing</a></li>
-          <li><a href="#">Work Experience</a></li>
-          <li><a href="#">Past Projects</a></li>
-          <li><a href="#">Schedule</a></li>
+          <li><a href="index.html">Wenxuan</a></li>
+          <li><a href="ongoing-projects.html">Doing</a></li>
+          <li><a href="work-experience.html">Work Experience</a></li>
+          <li><a href="past-projects.html">Past Projects</a></li>
+          <li><a href="insights-blogs.html">Insights & Blogs</a></li>
         </ul>
-      </nav>
-        <img src = "image.png" width="30%" style="padding-left: 34%; padding-top: 8%; padding-bottom: 2%;">
-        <p class="title">
-            Wenxuan Wu
+    </nav>
+
+    <header class="hero-section">
+        <img src="image.png" alt="Wenxuan Wu" class="avatar">
+        <h1>Wenxuan Wu</h1>
+        <p class="intro">
+            I'm a Computer Science enthusiast at the University of Maryland, passionate about blending technology with human-centric design to build innovative digital solutions. My work focuses on developing AI-driven platforms that facilitate meaningful community interactions and personal growth.
         </p>
-        <p style="padding: 3% 8% 2% 8% ;">I'm Wenxuan Wu, a Computer Science enthusiast at the University of Maryland, passionate about blending technology with human-centric design to build innovative digital solutions. My work focuses on developing AI-driven platforms that facilitate meaningful community interactions and personal growth.
+    </header>
 
-            Currently, I’m pioneering projects like a personalized event recommendation app and an AI empathy tool integrated with bio-signal devices, aimed at enhancing emotional support for college students.</p>
+    <section class="grid-container">
+        <!-- Past Projects Tile -->
 
-        <p class="title" style="padding-bottom: 3%;">
-            Doing   
-        </p>
-
-            <table>
-                <tr>
-                    <th>Project</th>
-                    <th>Description</th>
-                    <th>Timeline</th>
-                </tr>
-                <tr>
-                    <td>Huddle App</td>
-                    <td>A social app for organizing and discovering nearby community activities. It includes web scraping, personalized recommendations, and LLM integration to connect users with events and hangout spots.</td>
-                    <td>August 2024 - Ongoing</td>
-                </tr>
-                <tr>
-                    <td>LLM + Interventions</td>
-                    <td>Developing a system leveraging large language models for self-guided mental health interventions, integrating bio-signals and conversational diaries for emotional support and behavior change.</td>
-                    <td>July 2024 - Ongoing</td>
-                </tr>
-                <tr>
-                    <td>VR Project</td>
-                    <td>Exploring the development of immersive VR environments for real-time user interactions, focusing on community engagement and collaboration in virtual spaces.</td>
-                    <td>September 2024 - Ongoing</td>
-                </tr>
-            </table>
-        <p class="title" style="padding-top: 3%";>
-            Work Experience
-        </p>
-        <p style="padding: 3% 8% 2% 8%; ">
-
-            <strong>Computer Vision Team, AIATOR, Shenzhen, China July | Intern - August 2024</strong>
-<br>
-■ Optimized the visual recognition model training pipeline using active learning,
-reducing data annotation time by 40% and improving model iteration to prevent
-overfitting.<br>
-■ Analyzed and compared fine-tuning techniques and model architectures for textile
-industry robots, identifying the most effective approaches.
-■ Trained and deployed an updated visual recognition model (YOLO-v10), improving
-factory robot performance by 15%.<br><br>
-<strong>Human Computer Interaction Research, University of Notre Dame May | Undergraduate Researcher - July 2024</strong><br>
-
-■ Conducted literature reviews on 30+ leading papers in wearable devices and system
-design for promoting positive behavioral change.<br>
-■ Led the design and development of a Human-Language Model app for self-guided
-mental health interventions based on MCII, driving positive behavior change.<br>
-■ Proposed a further research plan to evaluate the system’s effectiveness in sustaining
-behavioral change on a larger subject scale.
-<br><br><strong>AI Pilot | AI Shop Assistant Robot | Co-founder and software developer | June - August 2023</strong>
-<br>
-■ Developed an AI-powered product promoter and shop assistant robot, using state-
-of-art large language model and voice recognition technologies during an AI
-Hackathon at Tsinghua University.<br>
-■ Led the ful-stack implementation of a continuous, interruptible conversation
-system and an interactive user interface with virtual 3D avatar using Unity Engine.<br>
-■ Launched the first version to over 100 participants at Demo Day, attracting interest
-from 20+ venture investors and forming a startup to scale the product.</p>
-
-        <p class="title">
-        <p class="title" style="padding-bottom: 1%;">
-            Past Projects
-        </p>
-        <a href = "https://www.youtube.com/watch?v=eQ-OVsdK-hM" style="padding: 6% 30% 6% 46.5%;">Check This Video</a>
-        
-        <footer class="footer">
-            <div class="footer-wrapper">
-              <div class="footer-links">
-                <ul>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Doing</a></li>
-                  <li><a href="#">Work</a></li>
-                  <li><a href="#">Projects</a></li>
-                  <li><a href="#">Contacts</a></li>
-                </ul>
+        <a href="past-projects.html" class="tile-link">
+          <div class="tile" data-color="blue">
+            <div class="tile-inner">
+              <div class="tile-front">
+                  <i class="fas fa-project-diagram"></i>
+                  <h2>Past Projects</h2>
               </div>
-              <div class="footer-legal">
-                <p>© 2024 Wenxuan Wu</p>
+              <div class="tile-back">
+                  <p>Explore my previous works and completed projects.</p>
               </div>
+          </div>
+          </div>
+      </a>
+
+        <!-- Ongoing Projects Tile -->
+
+
+        <a href="ongoing-projects.html" class="tile-link">
+          <div class="tile" data-color="green">
+              <!-- 内容不变 -->
+              <div class="tile-inner">
+                <div class="tile-front">
+                    <i class="fas fa-spinner"></i>
+                    <h2>Ongoing Projects</h2>
+                </div>
+                <div class="tile-back">
+                    <p>Discover what I'm currently working on.</p>
+                </div>
             </div>
-          </footer>
-          
-</body>
+          </div>
+      </a>
 
+      <a href="work-experience.html" class="tile-link">
+        <div class="tile" data-color="pink">
+            <!-- 内容不变 -->
+            <div class="tile-inner">
+              <div class="tile-front">
+                  <i class="fas fa-briefcase"></i>
+                  <h2>Work Experience</h2>
+              </div>
+              <div class="tile-back">
+                  <p>Learn about my professional background.</p>
+              </div>
+          </div>
+        </div>
+    </a>
+
+    <!-- Insights & Blogs Tile -->
+<a href="insights-blogs.html" class="tile-link">
+  <div class="tile" data-color="orange">
+      <!-- 内容不变 -->
+      <div class="tile-inner">
+        <div class="tile-front">
+            <i class="fas fa-blog"></i>
+            <h2>Insights & Blogs</h2>
+        </div>
+        <div class="tile-back">
+            <p>Read my thoughts and articles.</p>
+        </div>
+    </div>
+  </div>
+</a>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-wrapper">
+          <div class="footer-links">
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Doing</a></li>
+              <li><a href="#">Work</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </div>
+          <div class="footer-legal">
+            <p>© 2024 Wenxuan Wu</p>
+          </div>
+        </div>
+    </footer>
+
+    <!-- 初始化粒子背景 -->
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js loaded - callback');
+        });
+    </script>
+</body>
 </html>
