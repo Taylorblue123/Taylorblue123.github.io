@@ -6,31 +6,91 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <ul>
-          <li><a href="index.html">Wenxuan</a></li>
-          <li><a href="ongoing-projects.html">Doing</a></li>
-          <li><a href="work-experience.html">Work Experience</a></li>
-          <li><a href="past-projects.html">Past Projects</a></li>
-          <li><a href="insights-blogs.html">Insights & Blogs</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="index.html">Wenxuan</a></li>
+      <li class = "hideOnMobile"><a href="ongoing-projects.html">Doing</a></li>
+      <li class = "hideOnMobile"><a href="past-projects.html">Past Projects</a></li>
+      <li class = "hideOnMobile"><a href="work-experience.html">Work Experience</a></li>
 
-    <div class="content">
-        <h1>Past Projects</h1>
-        <div class="project-list">
-            <div class="project-item">
-                <h2>AI Pilot - AI Shop Assistant Robot</h2>
-                <p><strong>June - August 2023 | Co-founder and Software Developer</strong></p>
-                <ul>
-                    <li>Developed an AI-powered product promoter and shop assistant robot using state-of-the-art large language models and voice recognition technologies during an AI Hackathon at Tsinghua University.</li>
-                    <li>Led the full-stack implementation of a continuous, interruptible conversation system and an interactive user interface with a virtual 3D avatar using Unity Engine.</li>
-                    <li>Launched the first version to over 100 participants at Demo Day, attracting interest from 20+ venture investors and forming a startup to scale the product.</li>
-                </ul>
-            </div>
-            <!-- 添加更多项目 -->
-        </div>
-    </div>
+      <li class = "hideOnMobile"><a href="insights-blogs.html">Insights & Blogs</a></li>
+      <li class = "menuButton" onclick = showSidebar()><a herf = "#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="28px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+
+    <ul class = "sidebar">
+      <li onclick = hideSidebar()><a herf = "#">          <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+
+      <li><a href="index.html">Wenxuan</a></li>
+      <li><a href="ongoing-projects.html">Doing</a></li>
+      <li><a href="past-projects.html">Past Projects</a></li>
+      <li><a href="work-experience.html">Work Experience</a></li>
+
+      <li><a href="insights-blogs.html">Insights & Blogs</a></li>
+
+    </ul>
+</nav>
+
+<script>
+  function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex'
+  }
+  function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+  }
+</script>
+
+
+<!-- 示例：ongoing-projects.html -->
+<div class="content">
+  <h1>Past Projects</h1>
+  <div class="card-list">
+      <!-- 项目卡片 -->
+      <div class="card-item">
+        <a href = "#">
+          <h2>Huddle App</h2>
+          <p><strong>August 2024 - Ongoing</strong></p>
+          <ul>
+              <li>A social app for organizing and discovering nearby community activities.</li>
+              <li>Includes web scraping, personalized recommendations, and LLM integration to connect users with events and hangout spots.</li>
+          </ul>
+        </a>
+      </div>
+      <div class="card-item">
+        <a href = "#">
+          <h2>Huddle App</h2>
+          <p><strong>August 2024 - Ongoing</strong></p>
+          <ul>
+              <li>A social app for organizing and discovering nearby community activities.</li>
+              <li>Includes web scraping, personalized recommendations, and LLM integration to connect users with events and hangout spots.</li>
+          </ul>
+        </a>
+      </div>
+      <div class="card-item">
+        <a href = "#">
+          <h2>Huddle App</h2>
+          <p><strong>August 2024 - Ongoing</strong></p>
+          <ul>
+              <li>A social app for organizing and discovering nearby community activities.</li>
+              <li>Includes web scraping, personalized recommendations, and LLM integration to connect users with events and hangout spots.</li>
+          </ul>
+        </a>
+      </div>
+      <div class="card-item">
+        <a href = "#">
+          <h2>Huddle App</h2>
+          <p><strong>August 2024 - Ongoing</strong></p>
+          <ul>
+              <li>A social app for organizing and discovering nearby community activities.</li>
+              <li>Includes web scraping, personalized recommendations, and LLM integration to connect users with events and hangout spots.</li>
+          </ul>
+        </a>
+      </div>
+      <!-- 更多项目卡片 -->
+  </div>
+</div>
+
 
     <footer class="footer">
         <div class="footer-wrapper">

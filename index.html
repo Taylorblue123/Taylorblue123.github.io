@@ -12,29 +12,51 @@
     <!-- 引入 Font Awesome 图标库 -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <!-- 引入粒子背景库 -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-    <!-- 粒子背景容器 -->
-    <div id="particles-js"></div>
 
     <nav>
         <ul>
           <li><a href="index.html">Wenxuan</a></li>
+          <li class = "hideOnMobile"><a href="ongoing-projects.html">Doing</a></li>
+          <li class = "hideOnMobile"><a href="past-projects.html">Past Projects</a></li>
+          <li class = "hideOnMobile"><a href="work-experience.html">Work Experience</a></li>
+
+          <li class = "hideOnMobile"><a href="insights-blogs.html">Insights & Blogs</a></li>
+          <li class = "menuButton" onclick = showSidebar()><a herf = "#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="28px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+
+        <ul class = "sidebar">
+          <li onclick = hideSidebar()><a herf = "#">          <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+
+          <li><a href="index.html">Wenxuan</a></li>
           <li><a href="ongoing-projects.html">Doing</a></li>
-          <li><a href="work-experience.html">Work Experience</a></li>
           <li><a href="past-projects.html">Past Projects</a></li>
+          <li><a href="work-experience.html">Work Experience</a></li>
+
           <li><a href="insights-blogs.html">Insights & Blogs</a></li>
+
         </ul>
     </nav>
+
+    <script>
+      function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+      }
+      function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+      }
+    </script>
 
     <header class="hero-section">
         <img src="image.png" alt="Wenxuan Wu" class="avatar">
         <h1>Wenxuan Wu</h1>
         <p class="intro">
-            I'm a Computer Science enthusiast at the University of Maryland, passionate about blending technology with human-centric design to build innovative digital solutions. My work focuses on developing AI-driven platforms that facilitate meaningful community interactions and personal growth.
+            <strong>Coder and Explorer</strong><br><br> I am passionate about blending human-centric design to build innovative digital solutions. <br><br>My research interests focus on Human-Computer Interaction, Social Computing, VR/AR, as well as Graphics & Vision—everything that can be perceived by or involves human interaction.<br><br>My long-term mission for work is to leverage advanced technologies, including Mixed Reality and Generative AI, to create digital experiences that inspire and foster closer digital connections for all.
         </p>
     </header>
 
@@ -122,11 +144,5 @@
         </div>
     </footer>
 
-    <!-- 初始化粒子背景 -->
-    <script>
-        particlesJS.load('particles-js', 'particles.json', function() {
-            console.log('particles.js loaded - callback');
-        });
-    </script>
 </body>
 </html>

@@ -1,307 +1,360 @@
+
 /* 全局样式重置 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #121212; /* 深色背景 */
-  background-image: url('background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff; /* 白色文字 */
-  position: relative;
-  overflow-x: hidden;
+min-height: 100vh;
+font-family: 'Roboto', sans-serif;
+background-color: #121212; /* 深色背景 */
+background-image: url('background.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+color: #ffffff; /* 白色文字 */
+position: relative;
+overflow-x: hidden;
 }
-
-
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 0; /* 介于背景图片和内容之间 */
-}
-
-nav, .hero-section, .grid-container, footer, .content {
-  position: relative;
-  z-index: 1;
-}
-
 
 
 /* 导航栏样式 */
 nav {
-    background-color: rgba(18, 18, 18, 0.9);
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
+  background-color: rgba(29, 29, 29, 0.9);
+  box-shadow:  3px 3px 5px rgba(0, 0, 0, 0.3);
+
 }
 
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul li {
-    margin: 0 15px;
+  height:50px;
+  padding: 0 30px;
+  margin: 0 15px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-weight: 500;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
+nav li:hover{
+background-color: rgba(38, 37, 37, 0.468);
+box-shadow:  2px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+nav li:first-child {
+margin-right: auto;
+}
 nav ul li a:hover {
-    color: #00FFFF; /* 亮橙色 */
+  color: #00FFFF; /* 亮橙色 */
+}
+
+.sidebar {
+position:fixed;
+top: 0;
+right: 0;
+height: 100vh;
+width: 250px;
+z-index: 9999;
+background-color: rgba(0, 0, 0, 0.821);
+backdrop-filter: blur(10px);
+box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
+display: none;
+flex-direction: column;
+align-items: flex-start;
+justify-content: flex-start;
+}
+
+.sidebar li {
+width: 100%;
+}
+
+.sidebar a{
+width: 100%;
 }
 
 /* 头部区域 */
 .hero-section {
-    text-align: center;
-    padding: 150px 20px 100px;
+  text-align: center;
+  padding: 150px 20px 100px;
 }
 
 .avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    border: 3px solid #00FFFF; /* 亮橙色边框 */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 30px;
+  border: 3px solid #00FFFF; /* 亮橙色边框 */
 }
 
 .hero-section h1 {
-    font-size: 48px;
-    color: #FFFFFF;
-    margin-bottom: 20px;
+  font-size: 48px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
 }
 
 .intro {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
 }
 
 /* 网格容器 */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    padding: 50px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* 定义瓷砖颜色 */
 .tile[data-color="blue"] {
-  --tile-color: #00e1ff;
+--tile-color: #00e1ffcb;
 }
 
 .tile[data-color="green"] {
-  --tile-color: #ff00d9;
+--tile-color: #ff00d9d5;
 }
 
 .tile[data-color="pink"] {
-  --tile-color: #00ff48;
+--tile-color: #00ff48d1;
 }
 
 .tile[data-color="orange"] {
-  --tile-color: #ffa600ef;
+--tile-color:  #ffa600cb;
 }
 
 /* 瓷砖样式更新 */
 .tile-front, .tile-back {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid var(--tile-color);
+background-color: rgba(255, 255, 255, 0.1);
+border: 2px solid var(--tile-color);
 }
 
 .tile-front {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), var(--tile-color));
+background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), var(--tile-color));
 }
 
 .tile-back {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), var(--tile-color));
-  transform: rotateY(180deg);
+background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), var(--tile-color));
+transform: rotateY(180deg);
 }
 
 /* 瓷砖样式 */
 .tile-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .tile {
-    perspective: 1000px;
-    width: 100%;
-    height: 250px;
+  perspective: 1000px;
+  width: 100%;
+  height: 250px;
 }
 
 .tile-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
 .tile:hover .tile-inner {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .tile-front, .tile-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    border: 2px solid var(--tile-color);
-    transition: background 0.3s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid var(--tile-color);
+  transition: background 0.3s;
 }
 
 .tile-front {
-    background-color: var(--tile-color);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), var(--tile-color));
+  background-color: var(--tile-color);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), var(--tile-color));
 }
 
 .tile-back {
-    transform: rotateY(180deg);
-    background-color: var(--tile-color);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), var(--tile-color));
+  transform: rotateY(180deg);
+  background-color: var(--tile-color);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), var(--tile-color));
 }
 
 .tile:hover .tile-front, .tile:hover .tile-back {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), var(--tile-color));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), var(--tile-color));
 }
 
 .tile i {
-    font-size: 50px;
-    margin-bottom: 20px;
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
 .tile h2 {
-    font-size: 24px;
-    color: #FFFFFF;
+  font-size: 24px;
+  color: #FFFFFF;
 }
 
 .tile p {
-    font-size: 18px;
-    color: #FFFFFF;
+  font-size: 18px;
+  color: #FFFFFF;
 }
 
 /* 页脚样式 */
-footer {
-    background-color: rgba(18, 18, 18, 0.9);
-    padding: 20px;
-    color: #FFFFFF;
+.footer {
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+  background-color: rgba(18, 18, 18, 0.9);
+  color: #FFFFFF;
+  
 }
 
 .footer-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer-links ul {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
 
 .footer-links ul li {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .footer-links ul li a {
-    text-decoration: none;
-    color: #FFFFFF;
-    font-weight: 500;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
 .footer-links ul li a:hover {
-    color: #00FFFF; /* 亮橙色 */
+  color: #00FFFF; /* 亮橙色 */
 }
 
 .footer-legal {
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 /* 内容页面的样式 */
 .content {
-    max-width: 1000px;
-    margin: 150px auto 50px;
-    padding: 0 20px;
-    color: #FFFFFF;
+  max-width: 1000px;
+  margin: 150px auto 50px;
+  padding: 0 20px;
+  color: #FFFFFF;
 }
 
 .content h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #00FFFF; /* 亮橙色 */
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #00FFFF; /* 亮橙色 */
 }
 
 /* 卡片式布局 */
 .card-list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+display: flex;
+flex-direction: column;
+gap: 30px;
 }
 
 .card-item {
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 10px;
-  border-left: 5px solid #FFA500; /* 亮橙色边框 */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+background-color: rgba(255, 255, 255, 0.05);
+padding: 20px;
+border-radius: 10px;
+border-left: 5px solid #00FFFF; /* 亮橙色边框 */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+will-change: transform;
+}
+
+.card-item a {
+  text-decoration: none;
 }
 
 .card-item h2 {
-  font-size: 28px;
-  color: #FFFFFF;
-  margin-bottom: 10px;
+font-size: 28px;
+color: #FFFFFF;
+margin-bottom: 10px;
 }
 
 .card-item p, .card-item ul, .card-item ul li {
-  color: #BBBBBB;
+color: #e6e5e5;
 }
 
 .card-item ul {
-  list-style: disc inside;
-  margin-left: 20px;
+list-style: disc inside;
+margin-left: 20px;
 }
 
+.card-item:hover {
+  transform: translateY(-15px) scale(1.1); /* 更明显的效果 */
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+
+}
+
+.menuButton {
+display: none;
+}
 
 /* 响应式设计 */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 36px;
-    }
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .hero-section h1 {
+      font-size: 36px;
+  }
 
-    .tile i {
-        font-size: 40px;
-    }
+  .tile i {
+      font-size: 40px;
+  }
 
-    .tile h2 {
-        font-size: 20px;
-    }
+  .tile h2 {
+      font-size: 20px;
+  }
+
+  .menuButton {
+    display:flex 
+  }
+  .sidebar{
+    width: 100%;
+  }
 }
+
