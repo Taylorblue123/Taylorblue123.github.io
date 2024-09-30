@@ -334,7 +334,7 @@ display: none;
 }
 
 /* 响应式设计 */
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .hideOnMobile {
     display: none;
   }
